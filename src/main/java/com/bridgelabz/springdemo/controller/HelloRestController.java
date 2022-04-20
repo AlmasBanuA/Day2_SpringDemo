@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloRestController {
 
-    @RequestMapping(value={"/home"})
+    @GetMapping(value={"/home"})
     public String sayHello() {
         return "Hello From BridgeLabz!";
     }
-    @RequestMapping(value = {"/query"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/query"})
     public String sayHelloParam1 (@RequestParam(value="name")String name) {
         return "Hello " + name + "!";
     }
